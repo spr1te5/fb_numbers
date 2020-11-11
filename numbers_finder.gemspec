@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Finds given number of integers in big text streams}
   spec.description   = %q{Finds given number of integers in big text streams}
-  spec.homepage      = "https://github.com/spr1te5/ruby"
+  spec.homepage      = "https://github.com/spr1te5/fb_numbers"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
