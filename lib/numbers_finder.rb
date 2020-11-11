@@ -59,6 +59,7 @@ module NumbersFinder
     result.map(&:to_i)
   end
 
+  # :nodoc:
   def scan_chunks_for_numbers(source, max_numbers, max_number_len)
     last_number = ''
     source.each_char { |ch|
