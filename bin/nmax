@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+require 'bundler/inline'
+
+gemfile do
+  source 'https://rubygems.org'
+  gem 'numbers_finder', path: '.'
+end
+
+max_numbers_count = ARGV[0]
+puts "MAX: #{max_numbers_count}"
+
+unless max_numbers_count
+  puts 'Usage cat <text file> | nmax <expected max numbers count>'
+  exit(1)
+end
+
+require 'numbers_finder'
+max_numbers = NumbersFinder.extract_maximum_numbers_from_string(IO.try_convert(STDIN), max_numbers_count.to_i, 100)
+puts "#{max_numbers_count} maximum integers: #{max_numbers}."
