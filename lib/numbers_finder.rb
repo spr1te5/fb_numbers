@@ -45,11 +45,13 @@ module NumbersFinder
     result = []
 
     scan_chunks_for_numbers(source, max_numbers, max_number_len) { |number| 
-      result.sort! { |num1, num2| num1 <=> num2 }  
-      if result.size < max_numbers
+      result.sort! { |num1, num2| num1 <=> num2 }
+
+      not_added = !result.include?(number)
+      if result.size < max_numbers && not_added
         result << number
       else
-         if !result.include?(number) && result.any? { |number_as_string| number_as_string < number }
+         if not_added && result.any? { |number_as_string| number_as_string < number }
            result[0..-2] = result[1..-1]
            result[-1] = number
         end
