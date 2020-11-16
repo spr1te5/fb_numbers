@@ -15,7 +15,7 @@ module NumbersFinder
     def each_char
       begin
         loop do
-          STDIN.read_nonblock(chunk_size).each_char { |char| yield(ch) }
+          STDIN.read_nonblock(chunk_size).each_char { |char| yield(char) }
         end
       rescue
       end

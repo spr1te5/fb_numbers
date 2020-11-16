@@ -16,5 +16,5 @@ unless max_numbers_count
 end
 
 require 'numbers_finder'
-max_numbers = NumbersFinder.extract_maximum_numbers_from_string(IO.try_convert(STDIN), max_numbers_count.to_i, 100)
+max_numbers = NumbersFinder.extract_maximum_numbers_from_stream(max_numbers_count.to_i, 1000)
 puts "#{max_numbers_count} maximum integers: #{max_numbers}."
