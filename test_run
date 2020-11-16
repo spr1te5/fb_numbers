@@ -1,1 +1,1 @@
-cat ./testData.txt | ./nmax 4
+cat ./testData.txt | ./nmax 3

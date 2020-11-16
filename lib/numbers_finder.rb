@@ -41,7 +41,7 @@ module NumbersFinder
   # source:: поток с текстовыми данными (по умолчанию - STDIN).  
   # == Результат:
   # отсортированый по возрастанию массив, содержащий максимальные целые числа.
-  def extract_maximum_numbers_from_stream(max_numbers, max_number_len, source = StdInChunksSource.new)
+  def extract_maximum_numbers_from_stream(max_numbers, max_number_len, source)
     result = []
 
     scan_chunks_for_numbers(source, max_numbers, max_number_len) { |number| 
