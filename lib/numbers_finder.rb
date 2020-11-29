@@ -75,7 +75,7 @@ module NumbersFinder
       end
 
       if catch_number
-        yield "%0#{max_number_len}d" % last_number
+        yield last_number.to_i
         last_number = ''
       end
     }
